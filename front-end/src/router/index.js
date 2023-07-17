@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginForm from '../views/LoginForm.vue'
+import 'tailwindcss/tailwind.css';
+
 
 
 const routes = [{

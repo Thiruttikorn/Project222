@@ -31,9 +31,4 @@ nav a {
 nav a.router-link-exact-active {
   color: #121513;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 </style>
