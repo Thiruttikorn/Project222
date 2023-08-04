@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css';
 
 
 const routes = [{
-  path: '/',
+  path: '/login',
   name: 'login',
   component: LoginForm
 },

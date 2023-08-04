@@ -1,7 +1,7 @@
-+<template>
+<template>
   <nav>
     <router-link to="/home">Home</router-link> |
-    <router-link to="/">Login</router-link> |
+    <router-link to="/login">Login</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
@@ -9,8 +9,9 @@
 
 <style>
 body {
-        background-color: skyblue !important;
-    }
+  background-color: skyblue !important;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

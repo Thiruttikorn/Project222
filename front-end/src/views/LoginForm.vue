@@ -2,14 +2,15 @@
     <div>
         <h1>Login</h1>
         <form @submit.prevent="login">
-            <input type="email" v-model="email" placeholder="Email" required>
-            <input type="password" v-model="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <input class="form" type="email" v-model="email" placeholder="Email" required>
+            <input class="form" type="password" v-model="password" placeholder="Password" required>
+            <button class="login-button" type="submit">Login</button>
         </form>
     </div>
 </template>
   
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
@@ -20,40 +21,36 @@ export default {
     methods: {
         async login() {
             try {
-                const response = await fetch('/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        email: this.email,
-                        password: this.password
-                    })
-                });
+                // Make an HTTP POST request to the backend /login endpoint
+                const response = await axios.post('/login', { email: this.email, password: this.password });
 
-                if (response.ok) {
-                    const data = await response.json();
-                    const token = data.token;
+                // Store the token in local storage
+                localStorage.setItem('token', response.data.token);
 
-                    // Save the token to local storage or Vuex store for future use
-                    localStorage.setItem('token', token);
-
-                    // Assuming the login request was successful, navigate to the home page
-                    this.$router.push('/home');
-                } else {
-                    throw new Error('Invalid email or password');
-                }
+                // Redirect the user to the desired page (e.g., home page)
+                this.$router.push('/home');
             } catch (error) {
                 console.log(error);
+                this.$router.push('/about');
             }
         }
+
     }
 };
 </script>
   
 <style>
-input{
+.form {
     color: black !important;
+    margin-right: 5px;
+}
+
+.login-button {
+    border: 2px solid black;
+}
+
+.login-button:hover {
+    border: 2px solid white;
 }
 </style>
   
