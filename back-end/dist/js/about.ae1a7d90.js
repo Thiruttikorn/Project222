@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfront_end"]=self["webpackChunkfront_end"]||[]).push([[443],{4815:function(n,r,t){t.r(r),t.d(r,{default:function(){return d}});var u=t(3396);const e={class:"about"},a=(0,u._)("h1",null,"Thiruttikorn Sriwad",-1),c=[a];function i(n,r){return(0,u.wg)(),(0,u.iD)("div",e,c)}var o=t(89);const s={},f=(0,o.Z)(s,[["render",i]]);var d=f}}]);
+//# sourceMappingURL=about.ae1a7d90.js.map

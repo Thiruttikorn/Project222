@@ -2,9 +2,16 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const path = require('path');
+const authenticateToken = require('./events/authMiddleware');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+
+app.get('/events', authenticateToken, (req, res) => {
+    // Handle the authenticated request to /events
+    // Only authenticated users with a valid JWT token will reach this point
+});
 
 // Middleware to parse JSON request bodies
 app.use(express.json());

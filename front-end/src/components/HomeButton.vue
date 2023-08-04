@@ -3,16 +3,16 @@
     <h1>{{ msg }}</h1>
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       ดูตาราง
-</button>
-<!-- <button>ดูตาราง</button> -->
-<button>สร้างตาราง</button>
-   
+    </button>
+    <!-- <button>ดูตาราง</button> -->
+    <button>สร้างตาราง</button>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HomeButton',
   props: {
     msg: String
   }
@@ -24,14 +24,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

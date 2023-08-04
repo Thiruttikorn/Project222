@@ -13,8 +13,8 @@
 export default {
     data() {
         return {
-            email: '',
-            password: ''
+            email: 'example@example.com',
+            password: '1234'
         };
     },
     methods: {
