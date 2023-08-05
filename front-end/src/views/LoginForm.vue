@@ -31,7 +31,7 @@ export default {
                 this.$router.push('/home');
             } catch (error) {
                 console.log(error);
-                this.$router.push('/about');
+                this.$router.push('/home');
             }
         }
 
