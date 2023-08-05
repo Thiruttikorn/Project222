@@ -1,4 +1,4 @@
-<template>
++<template>
   <nav>
     <router-link to="/home">Home</router-link> |
     <router-link to="/">Login</router-link> |

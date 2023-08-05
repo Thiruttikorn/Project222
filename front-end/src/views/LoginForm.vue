@@ -52,6 +52,8 @@ export default {
 </script>
   
 <style>
-/* Add your custom styles here */
+input{
+    color: black !important;
+}
 </style>
   
